@@ -2,5 +2,6 @@ fastapi
 uvicorn
 numpy
 pillow
+tensorflow
 keras==3.5.0
 huggingface_hub
