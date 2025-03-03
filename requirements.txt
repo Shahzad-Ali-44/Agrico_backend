@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+numpy
+pillow
+keras==3.5.0
+huggingface_hub
