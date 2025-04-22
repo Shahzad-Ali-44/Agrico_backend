@@ -6,8 +6,6 @@ from io import BytesIO
 from PIL import Image
 import logging
 from huggingface_hub import hf_hub_download
-import uvicorn
-
 logging.basicConfig(level=logging.DEBUG)
 
 app = FastAPI()
