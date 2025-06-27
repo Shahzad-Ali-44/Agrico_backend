@@ -7,7 +7,7 @@ from PIL import Image
 import logging
 from huggingface_hub import hf_hub_download
 logging.basicConfig(level=logging.DEBUG)
-
+import uvicorn
 app = FastAPI()
 
 
@@ -117,3 +117,6 @@ async def predict(file: UploadFile = File(...)):
     except Exception as e:
         logging.error("Error during prediction: %s", str(e))
         return {"error": "An error occurred while processing the image."}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='localhost', port=8000)
